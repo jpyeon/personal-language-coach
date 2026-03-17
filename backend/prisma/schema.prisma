@@ -15,6 +15,31 @@ datasource db {
 // Phase 1 — Auth & User Profile
 // ------------------------------------------------------------
 
+enum ProficiencyLevel {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+}
+
+enum Domain {
+  CONVERSATION
+  CHURCH
+  TEXTING
+  WORK
+}
+
+model User {
+  id               String           @id @default(uuid())
+  email            String           @unique
+  passwordHash     String
+  targetLanguage   String           @default("KO")
+  proficiencyLevel ProficiencyLevel @default(BEGINNER)
+  learningGoals    String[]
+  preferredDomains Domain[]
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+}
+
 // Phase 2 — Exercises
 // ------------------------------------------------------------
 
