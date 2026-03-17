@@ -1,0 +1,28 @@
+// Personal Language Coach — Prisma Schema
+// Models are added incrementally per implementation phase.
+// See the project technical plan for the full data model design.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ------------------------------------------------------------
+// Phase 1 — Auth & User Profile
+// ------------------------------------------------------------
+
+// Phase 2 — Exercises
+// ------------------------------------------------------------
+
+// Phase 3 — Attempts
+// ------------------------------------------------------------
+
+// Phase 4 — Feedback & Error Tags
+// ------------------------------------------------------------
+
+// Phase 5 — Weakness Profile
+// ------------------------------------------------------------

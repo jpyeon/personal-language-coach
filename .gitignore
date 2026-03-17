@@ -1,0 +1,24 @@
+# ── Environment ───────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Node ──────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+
+# ── NestJS / TypeScript ───────────────────────────────────────
+backend/dist/
+backend/generated/
+
+# ── Angular ───────────────────────────────────────────────────
+frontend/dist/
+frontend/.angular/
+
+# ── Prisma ────────────────────────────────────────────────────
+# Prisma generates a client at build time; never commit it.
+backend/node_modules/.prisma/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db

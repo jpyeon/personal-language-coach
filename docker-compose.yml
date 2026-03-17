@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: plc_postgres
+    environment:
+      POSTGRES_USER: plc_user
+      POSTGRES_PASSWORD: plc_password
+      POSTGRES_DB: personal_language_coach
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
